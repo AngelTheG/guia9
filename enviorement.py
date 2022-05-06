@@ -5,17 +5,49 @@ class Enviorement():
     def __init__(self):
         self.__defaultRunner = Runner()
 
+        #Colores para el estetico de la consola
+        self.PRPL = '\033[95m'
+        self.BLUE = '\033[94m'
+        self.GREN = '\033[92m'
+        self.GOLD = '\033[93m'
+        self.BRED = '\033[91m'
+        self.DFLT = '\033[0m'
+
 
     def menu(self):
         #DEBUG - Limpiar la terminal por cada vez que se muestre el menú en pantalla
         os.system ("clear")
 
         while True:
-            print("Warrior & Wizards")
-            print("[ 1 ] Jugar")
-            print("[ 0 ] Salir")
 
-            mainMenuChoice = int(input("Elija su destino\n> "))
+            #WARRIORS
+            print(self.BRED)
+            print("   █     █░ ▄▄▄       ██▀███   ██▀███   ██▓ ▒█████   ██▀███    ██████ ")
+            print("  ▓█░ █ ░█░▒████▄    ▓██ ▒ ██▒▓██ ▒ ██▒▓██▒▒██▒  ██▒▓██ ▒ ██▒▒██    ▒ ")
+            print("  ▒█░ █ ░█ ▒██  ▀█▄  ▓██ ░▄█ ▒▓██ ░▄█ ▒▒██▒▒██░  ██▒▓██ ░▄█ ▒░ ▓██▄   ")
+            print("  ░█░ █ ░█ ░██▄▄▄▄██ ▒██▀▀█▄  ▒██▀▀█▄  ░██░▒██   ██░▒██▀▀█▄    ▒   ██▒")
+            print("  ░░██▒██▓  ▓█   ▓██▒░██▓ ▒██▒░██▓ ▒██▒░██░░ ████▓▒░░██▓ ▒██▒▒██████▒▒")
+            print("  ░ ▓░▒ ▒   ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ▒▓ ░▒▓░░▓  ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░▒ ▒▓▒ ▒ ░")
+            print("    ▒ ░ ░    ▒   ▒▒ ",self.DFLT," _______  _        ______",self.BRED,"  ▒ ▒░   ░▒ ░ ▒░░ ░▒  ░ ░")
+            print("    ░   ░    ░   ▒  ",self.DFLT,"(  ___  )( (    /|(  __  \ ",self.BRED,"░ ▒    ░░   ░ ░  ░  ░  ")
+            print("      ░          ░  ",self.DFLT,"| (   ) ||  \  ( || (  \  ) ",self.BRED," ░     ░           ░  ")#
+            print("                    ",self.DFLT,"|  ___  || (\ \) || |   | |")
+            print("                      | (   ) || | \   || |   ) |")
+            print("                      | )   ( || )  \  || (__/  )")
+            print("                      |/     \||/    )_)(______/ ")
+            print(self.BLUE,"          ██     ██ ██ ███████  █████  ██████  ██████  ███████ ")#
+            print("          ██     ██ ██    ███  ██   ██ ██   ██ ██   ██ ██      ")
+            print("          ██  █  ██ ██   ███   ███████ ██████  ██   ██ ███████ ")
+            print("          ██ ███ ██ ██  ███    ██   ██ ██   ██ ██   ██      ██ ")
+            print("           ███ ███  ██ ███████ ██   ██ ██   ██ ██████  ███████ ")
+
+
+            #Opciones
+            print(self.DFLT,"")
+            print("                             [ 1 ] Jugar")
+            print("                             [ 0 ] Salir",self.GOLD)
+
+            mainMenuChoice = int(input("                           Elija su destino\n                                 >"))
             
             if mainMenuChoice == 1:
                 os.system ("clear")
@@ -53,5 +85,5 @@ class Enviorement():
 
             if mainMenuChoice == 0:
                 os.system ("clear")
-                print("\nBusca tu camino a casa...\n\n")
+                print(self.BRED,"\nBusca tu camino a casa...\n\n")
                 break

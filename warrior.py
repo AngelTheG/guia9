@@ -1,11 +1,19 @@
 from fighter import Fighter
 
 class Warrior(Fighter):
+    
     def __init__(self):
         super().__init__()
         self.__vulnerable = False
         self.__health = 90
 
+        #Colores para el estetico de la consola
+        self.PRPL = '\033[95m'
+        self.BLUE = '\033[94m'
+        self.GREN = '\033[92m'
+        self.GOLD = '\033[93m'
+        self.BRED = '\033[91m'
+        self.DFLT = '\033[0m'
     
     def getHealth(self):
         return self.__health
